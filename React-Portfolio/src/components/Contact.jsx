@@ -6,6 +6,7 @@ export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState({ name: '', email: '', message: '' });
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -18,7 +19,30 @@ export default function Contact() {
         return setEmail(value);
       case 'message':
         return setMessage(value);
+      default:
+        return;
     }
+  };
+
+  const validateField = (fieldName, value) => {
+    let errorMsg = '';
+    if (!value) {
+      errorMsg = `${fieldName} is required`;
+    } else if (fieldName === 'email' && !validateEmail(value)) {
+      errorMsg = 'Invalid email address';
+    }
+    setErrors((prevErrors) => ({ ...prevErrors, [fieldName]: errorMsg }));
+  };
+
+  // email validation regex sourced from module 12 activity 16 helper.js
+  function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    validateField(name, value);
   };
 
   const handleFormSubmit = (e) => {
@@ -29,6 +53,7 @@ export default function Contact() {
     setName('');
     setEmail('');
     setMessage('');
+    setErrors({ name: '', email: '', message: '' });
   };
   
   return (
@@ -39,23 +64,35 @@ export default function Contact() {
         value={name}
         name="name"
         onChange={handleInputChange}
+        onBlur={handleBlur}
         type="text"
         placeholder="Name"
       />
+      {errors.name && 
+        <p style={{color:'red'}}>{errors.name}</p>
+      }
       <input
         value={email}
         name="email"
         onChange={handleInputChange}
+        onBlur={handleBlur}
         type="text"
         placeholder="Email"
       />
+      {errors.email && 
+        <p style={{color:'red'}}>{errors.email}</p>
+      }
       <input
         value={message}
         name="message"
         onChange={handleInputChange}
+        onBlur={handleBlur}
         type="textarea"
         placeholder="Message"
       />
+      {errors.message && 
+        <p style={{color:'red'}}>{errors.message}</p>
+      }
       <button type="submit">
         Submit
       </button>
