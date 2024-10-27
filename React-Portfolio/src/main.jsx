@@ -1,14 +1,21 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css'
-import App from './App.jsx'
+import './index.css';
+import App from './App';
 
-import ProjectPage from './components/Project.jsx';
-import HomePage from './components/Home.jsx';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import HomePage from './components/Home';
+import AboutPage from './pages/About';
+import PortfolioPage from './components/Portfolio';
+import ErrorPage from './components/Error';
+import ResumePage from './pages/Resume';
+import ContactPage from './components/Contact';
 
 const router = createBrowserRouter([
-  // xTodo: Define the accessible routes, and which components respond to which URL
+  // Define the accessible routes, and which components respond to which URL
   {
     path: '/',
     element: <App />,
@@ -19,15 +26,26 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: '/profile/:id',
-        element: <ProfilePage />,
+        path: '/About',
+        element: <AboutPage />,
       },
+      {
+        path: '/Portfolio',
+        element: <PortfolioPage />,
+      },
+      {
+        path: '/Contact',
+        element: <ContactPage />,
+      },
+      {
+        path: '/Resume',
+        element: <ResumePage />,
+      }
     ],
   }
 ]);
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+// Render the RouterProvider component
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <RouterProvider router={router} />
+);
