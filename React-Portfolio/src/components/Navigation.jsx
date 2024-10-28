@@ -12,21 +12,13 @@ export default function Navigation() {
           to="/"
           className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
         >
-          Home
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link
-          to="/About"
-          className={currentPage === '/About' ? 'nav-link active' : 'nav-link'}
-        >
           About Me
         </Link>
       </li>
       <li className="nav-item">
         <Link
           to="/Portfolio"
-          className={currentPage === '/Blog' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav-link'}
         >
           Portfolio
         </Link>
