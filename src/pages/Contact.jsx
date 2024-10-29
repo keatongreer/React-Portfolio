@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/Contact.css';
 
 export default function Contact() {
 
@@ -82,12 +83,11 @@ export default function Contact() {
       {errors.email && 
         <p style={{color:'red'}}>{errors.email}</p>
       }
-      <input
+      <textarea
         value={message}
         name="message"
         onChange={handleInputChange}
         onBlur={handleBlur}
-        type="textarea"
         placeholder="Message"
       />
       {errors.message && 

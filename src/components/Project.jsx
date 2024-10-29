@@ -8,10 +8,10 @@ export default function Project(props) {
       <div className="box" style={{ backgroundImage: `url(${props.image})` }}>
       {/* <div className="box"> */}
         <div className="cover">
-          <h3 className="name">Tim Cook</h3>
-          <p className="title">Android Developer</p>
+          <h3 className="name"><a href={props.deployedLink}>{props.title}</a></h3>
+          {props.subtitle && <p className="title">{props.subtitle}</p>}
           <div className="social">
-            <a href="#"><i className="bi bi-github"></i></a>
+            <a href={props.repoLink}><i className="bi bi-github"></i></a>
           </div>
         </div>
       </div>
