@@ -1,4 +1,5 @@
 import '../styles/Project.css'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function Project(props) {
 
@@ -10,9 +11,7 @@ export default function Project(props) {
           <h3 className="name">Tim Cook</h3>
           <p className="title">Android Developer</p>
           <div className="social">
-            <a href="#"><i className="fa fa-facebook-official"></i></a>
-            <a href="#"><i className="fa fa-twitter"></i></a>
-            <a href="#"><i className="fa fa-instagram"></i></a>
+            <a href="#"><i className="bi bi-github"></i></a>
           </div>
         </div>
       </div>
