@@ -1,11 +1,31 @@
-export default function About() {
+import "../styles/About.css";
 
-    return (
-      <>
-        <h1>About Me</h1>
-        {/* insert image */}
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus vel purus sit amet tincidunt. Praesent ut neque turpis. Aliquam in vehicula quam. Sed semper sollicitudin dignissim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque eget consectetur odio. Morbi at porttitor elit.</p>
-        <p>Fusce nec volutpat enim, ut sodales dui. Vestibulum eget odio neque. Aliquam sed lectus sed dui molestie finibus eget id est. Nulla non fermentum est, at rhoncus nulla. Nunc tincidunt quam nec leo maximus feugiat. Nam ac odio cursus, consectetur ex et, accumsan eros. Donec a pellentesque ipsum. Quisque hendrerit purus et justo lacinia viverra. Sed vulputate quam non porttitor pharetra. Fusce augue erat, ullamcorper eget magna rutrum, gravida ultricies libero. Aliquam blandit luctus lorem vitae pretium. Sed nec turpis auctor, mollis purus non, scelerisque neque. Sed maximus mauris justo, non interdum enim tristique mattis. Aliquam lectus enim, tristique vitae tristique et, consectetur eu libero. Proin in tellus magna.</p>
-      </>
-    );
-  }
+export default function About() {
+  return (
+    <div className="container">
+      <h1>About Me</h1>
+      <div className="about-content">
+        {/* avatar created with https://avatarmaker.com/ */}
+        <img src="/PortfolioAvatar.png" alt="" />
+        <div className="about-text">
+          <p>
+            Hello! My name is Keaton Greer, and I am a full-stack web developer.
+            Over the past year, I've honed my skills in HTML, CSS, JavaScript,
+            React, Node.js, Express.js and SQL, creating dynamic and responsive
+            websites. I’m always excited to take on new challenges and am
+            continuously looking for ways to expand my knowledge in web
+            development.
+          </p>
+          <p>
+            Outside of web development, I enjoy playing video games that inspire
+            my problem-solving skills, watching movies, spending time with
+            friends, exercising, and going on walks outdoors. During the winter
+            months you can find me watching Indiana Hoosiers football and
+            basketball, while in the spring and summer, I enjoy watching college
+            and professional lacrosse.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}

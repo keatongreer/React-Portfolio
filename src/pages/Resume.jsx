@@ -1,10 +1,12 @@
+import '../styles/Resume.css';
+
 export default function Resume() {
 
     return (
-      <>
+      <div className='container'>
         <h1>Resume</h1>
 
-        <p>Resume placeholder</p>
+        <p>You can <a href="/Keaton_Greer_Resume.pdf" download>download</a> a PDF file of my resume.</p>
 
         <h2>Front-end Proficiencies</h2>
         <ul>
@@ -23,6 +25,6 @@ export default function Resume() {
           <li>Express</li>
           <li>PostgreSQL</li>
         </ul>
-      </>
+      </div>
     );
   }
