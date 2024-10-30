@@ -1,11 +1,7 @@
-/* Navigation.css */
-
 .navigation {
   display: flex;
   justify-content: center;
-  background-color: #edf2f4;
   padding: 2rem 0;
-  border-bottom: 3px solid #d90429;
   font-size: 1.1rem;
   margin: 0;
 }
@@ -16,7 +12,7 @@
 }
 
 .link {
-  color: #2b2d42;
+  color: #edf2f4;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -29,6 +25,6 @@
 }
 
 .link.active {
-  background-color: #2b2d42;
-  color: #ffffff;
+  background-color: #edf2f4;
+  color: #2b2d42;
 }
