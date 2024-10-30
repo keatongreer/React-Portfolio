@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import AboutPage from './pages/About';
 import PortfolioPage from './pages/Portfolio';
-import ErrorPage from './components/Error';
+import ErrorPage from './pages/Error';
 import ResumePage from './pages/Resume';
 import ContactPage from './pages/Contact';
 
