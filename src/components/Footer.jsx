@@ -10,6 +10,13 @@ export default function Footer() {
           <a href="https://github.com/keatongreer" aria-label="GitHub">
             <span className="bi bi-github"></span>
           </a>
+
+          <a
+            href="https://www.linkedin.com/in/keatongreer/"
+            aria-label="LinkedIn"
+          >
+            <span className="bi bi-linkedin"></span>
+          </a>
         </div>
       </div>
     </footer>
