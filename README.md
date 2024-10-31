@@ -10,7 +10,6 @@ Portfolio website created with React.js
 - [License](#license)
 - [Tests](#tests)
 - [Questions](#questions)
-- [Video Walkthrough](#video)
 
 ## Usage
 You can visit the deployed site [here](https://keatongreerportfolio.netlify.app/)
